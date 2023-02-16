@@ -1,6 +1,7 @@
 import os.path
 
-from .avro_helper import save_records, read_records, back_pressure_save_records, back_pressure_read_records
+from .avro_helper import save_records, read_records, \
+    back_pressure_save_records, back_pressure_read_records
 
 SCHEMA_PATH = "schemas/split.avsc"
 FILE_PATH = "avro_files/splits_20230124.avro"

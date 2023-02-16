@@ -1,0 +1,44 @@
+{
+    "type": "record",
+    "name": "Split",
+    "namespace": "running",
+    "fields": [
+        {
+            "name": "cadence",
+            "type": "int",
+            "default": 0
+        },
+        {
+            "name": "distance",
+            "type": "double",
+            "default": 0
+        },
+        {
+            "name": "duration",
+            "type": "int",
+            "logicalType": "time",
+            "default": 0
+        },
+        {
+            "name": "impact",
+            "type": "int",
+            "default": 0
+        },
+        {
+            "name": "lap",
+            "type": "int",
+            "default": 0
+        },
+        {
+            "name": "pace",
+            "type": "int",
+            "logicalType": "time",
+            "default": 0
+        },
+        {
+            "name": "steps",
+            "type": "int",
+            "default": 0
+        }
+    ]
+}

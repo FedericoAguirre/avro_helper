@@ -38,19 +38,17 @@ def test_read_avro_file():
     assert laps[1].get("lap") == 2
     assert laps[1].get("steps") == 597
 
-# def test_create_bk_avro_file():
-#     laps = []
-#     for counter in range(1_000):
-#         lap = {
-#             "cadence": 167,
-#             "distance": 0.5,
-#             "duration": 221,
-#             "impact": 891,
-#             "lap": counter,
-#             "pace": 445,
-#             "steps": 617
-#         }
-#         laps.append(lap)
-
-#     back_pressure_save_records(laps, SCHEMA_PATH, BP_FILE_PATH)
-#     assert os.path.exists(BP_FILE_PATH)
+def test_create_bp_avro_file():
+    back_pressure_save_records((
+            {
+                "cadence": 167,
+                "distance": 0.5,
+                "duration": 221,
+                "impact": 891,
+                "lap": counter,
+                "pace": 445,
+                "steps": 617
+            } for counter in range(10_000)
+        ), 
+        SCHEMA_PATH, BP_FILE_PATH)
+    assert os.path.exists(BP_FILE_PATH)

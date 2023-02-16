@@ -16,7 +16,7 @@ def test_create_bk_avro_file():
                 "lap": counter,
                 "pace": 445,
                 "steps": 617
-            } for counter in range(10_0000)
+            } for counter in range(10_000)
         ), 
         SCHEMA_PATH, BP_FILE_PATH)
 
